@@ -1,0 +1,7 @@
+Welcome, <%= User.find(session[:user_id]).username %>
+
+<% @tweets.each do |tweet| %>
+    <p>User: <%= tweet.user.username %></p>
+    <p>Tweet: <%= tweet.content %></p>
+
+<% end %>
