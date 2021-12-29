@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     end
 
     get '/login' do
-        binding.pry
+        # binding.pry
         if session[:user_id]
             redirect '/tweets'
         else
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
 
     get '/logout' do
         session.clear
-        redirect '/'
+        redirect '/login'
     end
 
     get '/users/:slug' do
